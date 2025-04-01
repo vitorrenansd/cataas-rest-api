@@ -7,7 +7,7 @@ export default function App() {
 
   const fetchCatImage = () => {
     if (!text.trim()) return;
-    const url = https://cataas.com/cat/says/${encodeURIComponent(text)};
+    const url = https=//cataas.com/cat/says/${encodeURIComponent(text)};
     setImageUrl(url);
   };
 
