@@ -23,7 +23,7 @@ export default function App() {
         title='Gerar Gato'
         onPress={fetchCatImage}
       />
-      {imageUrl && <Image source={{ uri: imageUrl }} style={styles.image} />}
+      {imageUrl && <Image source={{ uri: imageUrl }} style={styles.image}/>}
     </View>
   );
 }
