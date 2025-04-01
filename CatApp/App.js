@@ -16,7 +16,7 @@ export default function App() {
       <TextInput
         style={styles.input}
         placeholder='Type something'
-        placeholderTextColor={"#FFFFFF"}
+        placeholderTextColor={"#ffffff"}
         value={text}
         onChangeText={setText}
       />
