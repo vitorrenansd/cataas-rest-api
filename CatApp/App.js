@@ -7,7 +7,7 @@ export default function App() {
 
   const fetchCatImage = () => {
     if (!text.trim()) return;
-    const url = 'https://cataas.com/cat/says/${encodeURIComponent(text)}'
+    const url = `https://cataas.com/cat/says/${encodeURIComponent(text)}`;
     setImageUrl(url);
   };
 
@@ -15,12 +15,12 @@ export default function App() {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder='Digite um texto'
+        placeholder='Type a phrase'
         value={text}
         onChangeText={setText}
       />
       <Button
-        title='Gerar Gato'
+        title='Create a cat'
         onPress={fetchCatImage}
       />
       {imageUrl && <Image source={{ uri: imageUrl }} style={styles.image}/>}
