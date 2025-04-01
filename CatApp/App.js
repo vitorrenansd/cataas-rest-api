@@ -1,27 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react";
+import { View, TextInput, Button, Image, StyleSheet } from "react-native";
 
-// Body (looks like HTML)
 export default function App() {
+  const [text, setText] = useState("");
+  const [imageUrl, setImageUrl] = useState(null);
+
+  const fetchCatImage = () => {
+    if (!text.trim()) return;
+    const url = https://cataas.com/cat/says/${encodeURIComponent(text)};
+    setImageUrl(url);
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={[styles.defaultTitle1]}>Hello World!</Text>
-      <StatusBar style="auto" />
+      <TextInput
+        style={styles.input}
+        placeholder="Digite um texto"
+        value={text}
+        onChangeText={setText}
+      />
+      <Button title="Gerar Gato" onPress={fetchCatImage} />
+      {imageUrl && <Image source={{ uri: imageUrl }} style={styles.image} />}
     </View>
   );
 }
 
-// Styles (looks like CSS)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222222',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
   },
-  defaultTitle1: { // Created a h1 style
-    color: '#ffffff',
-    fontSize: 30,
-    fontWeight: 'bold'
-  }
+  input: {
+    width: "80%",
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
+  },
+  image: {
+    width: 300,
+    height: 300,
+    marginTop: 20,
+  },
 });
