@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+// Body (looks like HTML)
 export default function App() {
   return (
     <View style={styles.container}>
@@ -10,6 +11,7 @@ export default function App() {
   );
 }
 
+// Styles (looks like CSS)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  defaultTitle1: {
+  defaultTitle1: { // Created a h1 style
     color: '#ffffff',
     fontSize: 30,
     fontWeight: 'bold'
