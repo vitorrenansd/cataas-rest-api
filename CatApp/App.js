@@ -15,14 +15,18 @@ export default function App() {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder='Type a phrase'
+        placeholder='Type something'
+        placeholderTextColor={"#FFFFFF"}
         value={text}
         onChangeText={setText}
       />
-      <Button
-        title='Create a cat'
-        onPress={fetchCatImage}
-      />
+      <View style={styles.button}>
+        <Button
+          title='Create a cat'
+          color='#ffc0cb' // Pink button
+          onPress={fetchCatImage}
+        />
+      </View>
       {imageUrl && <Image source={{ uri: imageUrl }} style={styles.image}/>}
     </View>
   );
@@ -31,13 +35,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#222222',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
+  button: {
+    marginTop: 15,
+    marginBottom: 15
+  },
   input: {
     width: '80%',
     height: 40,
+    color: '#ffffff',
     borderColor: 'gray',
     borderWidth: 1,
     marginBottom: 10,
@@ -45,7 +55,6 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 300,
-    height: 300,
-    marginTop: 20,
-  },
+    height: 400
+  }
 });
