@@ -35,10 +35,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222222',
+    backgroundColor: '#000000',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: 20
   },
   button: {
     marginTop: 15,
