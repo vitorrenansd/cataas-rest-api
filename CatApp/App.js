@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     marginBottom: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10
   },
   image: {
-    width: 300,
+    width: 400,
     height: 400
   }
 });
