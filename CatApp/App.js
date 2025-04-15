@@ -23,7 +23,7 @@ export default function App() {
       <View style={styles.button}>
         <Button
           title='Create a cat'
-          color='#ffc0cb' // Pink button
+          color='#ff00ff' // Pink button
           onPress={fetchCatImage}
         />
       </View>
